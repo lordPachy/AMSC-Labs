@@ -113,6 +113,7 @@ We can add operators between commands in order to chain them together.
 
 ---
 ### Advanced commands: sed, find
+Sed is a find and replace in a line-by-line fashion. This is useful for large files.
 ```bash
 sed -i 's/<target-string>/<new-string>/' filename
 ```
@@ -132,6 +133,7 @@ find ~ -iname "*tools*md" 2>/dev/null
 You can monitor resources with `top` for processes (`q` for quit), and compare with information from `lscpu` (or `cat /proc/cpuinfo`).
 
 Similarly, `free -h` for memory. You can also use `watch -n 1 free -h` (`ctrl+c` to terminate).
+`watch` is useful to keep an interactively updated window of the called command.
 
 ---
 ## 1.3 Text editing
@@ -163,12 +165,14 @@ $ ls ~/.ssh
 id_ed25519  id_ed25519.pub
 ```
 extra: see also the permissions, with `ls -l` or `stat`.
+The rightmost number in the .pub file is the container (cluster) number.
 
 ---
 # 2. Compilation and automatic compilation tools
 
 ---
 ## 2.1 g++ and clang++
+g++ is the gcc version for c++.
 Basic compile/link flags:
 ```bash
 g++ -I /path/to/non-std/include -c main.cpp
